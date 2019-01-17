@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: env-print
+spec:
+  containers:
+  - name: busybox
+    image: busybox
+    command:
+      - env
+    env:
+    - name: NAME
+      value: "Naga"
+    - name: COMPANY
+      value: "LS"
+    - name: KUBE    
+      value: "is awesome"
